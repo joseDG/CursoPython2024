@@ -1,31 +1,15 @@
-#sintaxis
-#forma tradicional
-palabra = 'python'
-lista = []
+#sintaxis basica de la compresion de listas
+#[expresion for elemento in iterable]
+#crear una lista de cuadrados de los numero del 0 al 9
+cuadrados = [x**2 for x in range(10)]
+print(cuadrados)
 
-for item in palabra:
-  lista.append(item)
+#[expresion for elemento in iterable if condicion]
+#crear una lista del 0 al 9 pero que nos devuelva los valores pares
+pares = [x for x in range(10) if x % 2 == 0]
+print(pares)
 
-#print(lista)
-
-#compresion de listas
-lista = [item for item in 'python']
-#print(lista)
-
-#compresion de listas con numeros
-#nueva_lista = [expresion for item in iterable if condicion == True]
-lista = [ item/2 for item in range(0, 21, 2)]
-#print(lista)
-
-#usando if
-lista = [n for n in range(0, 21,2) if n**2 > 10]
-print(lista)
-
-numeros = [1,2,3,4,5,6,7,8,9,10]
-resultado = ['par' if numero % 2 == 0 else 'impar' for numero in numeros]
-print(resultado)
-
-#convertir de pies a metros
-metros = [10,20,30,40,50]
-pies = [p * 3.281 for p in metros]
-print(pies)
+#[expresion1 if condicion else expresion 2 for elemento in iterable]
+#listar numeros pares e impares pero estos se muestra con un texto
+par_impar = ['par' if x%2 == 0 else 'impar' for x in range(10)]
+print(par_impar)
